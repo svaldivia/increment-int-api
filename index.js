@@ -1,6 +1,19 @@
-var express = require('express');
-var cool = require('cool-ascii-faces');
-var app = express();
+const express = require('express');
+const app = express();
+const mongoose = require('mongoose');
+const User = require('./models/user.model');
+
+
+// Connect to MongoDB
+var uristring = process.env.MONGODB_URI || 'mongodb://localhost/inc-int';
+
+mongoose.connect(uristring, function (err, res) {
+  if (err) {
+    console.log ('ERROR connecting to: ' + uristring + '. ' + err);
+  } else {
+    console.log ('Succeeded connected to: ' + uristring);
+  }
+});
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -10,16 +23,9 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/', function(request, response) {
-  response.render('pages/index');
-});
-
-app.get('/cool', function(request, response) {
-    response.send(cool());
-});
+// Routes
+require('./routes')(app);
 
 app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
+    console.log('Node app is running on port', app.get('port'));
 });
-
-
