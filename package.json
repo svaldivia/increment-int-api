@@ -1,7 +1,7 @@
 {
-  "name": "node-js-getting-started",
+  "name": "increment-int-app",
   "version": "0.2.6",
-  "description": "A sample Node.js app using Express 4",
+  "description": "Simple API that increments and int for a user",
   "engines": {
     "node": "6.10.2"
   },
