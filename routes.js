@@ -10,4 +10,7 @@ module.exports = function (app) {
         response.send(cool());
     });
 
+    app.use('/api/register', require('./api/register'));
+    app.use('/api/count', require('./api/count'));
+
 }
