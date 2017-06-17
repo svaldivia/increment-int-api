@@ -1,0 +1,45 @@
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <base href="/">
+    <title>Increment Integer UI</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- <link rel="stylesheet" href="styles/app.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  </head>
+  <body ng-app="IntIncApp">
+    <div ui-view=""></div>
+
+    <!-- Angular Scripts -->
+
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/lodash/lodash.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+        <script src="scripts/shared/constants/app-states.js"></script>
+        <script src="scripts/app.module.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/app.constants.js"></script>
+
+        <script src="scripts/shared/constants/app-states.config.js"></script>
+
+        <!-- Sections -->
+        <script src="scripts/sections/login/login.module.js"></script>
+        <script src="scripts/sections/login/login.controller.js"></script>
+
+        <script src="scripts/sections/commands/commands.module.js"></script>
+        <script src="scripts/sections/commands/commands.controller.js"></script>
+
+        <!-- Services -->
+        <script src="scripts/shared/services/api/api.module.js"></script>
+        <script src="scripts/shared/services/api/api.service.js"></script>
+
+        <!-- Components -->
+
+
+    <!-- end Angular Scrips -->
+  </body>
+</html>

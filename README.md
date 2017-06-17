@@ -1,4 +1,4 @@
-# node-js-getting-started
+# Increment An Integer API
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
 

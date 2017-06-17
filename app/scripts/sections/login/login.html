@@ -1,0 +1,12 @@
+<h1>Increment Integer API</h1>
+<p>The perfect API for all your interger incrementing needs</p>
+
+<form name="vm.loginRegisterForm" class="" >
+    <input ng-model="vm.email" type="email" placeholder="Email">
+    <!-- <input ng-model="vm.password" ng-pattern="vm.passwordRegex" type="password" placeholder="Password" > -->
+    <input ng-model="vm.password" type="password" placeholder="Password" >
+    <label>Should contain at least 1 digit, one lower case letter, one upper case letter and be at least 8 characters</label>
+    <button ng-click="vm.loginOrRegister()" class="btn btn-sm btn-info">{{vm.isLogin ? "Login" : "Register"}}</button>
+    <a ng-click="vm.isLogin = !vm.isLogin">{{vm.isLogin ? "Register an account" : "I have an account! Log me in!"}}</a>
+    <p ng-show="vm.error">{{vm.error}}</p>
+</form>

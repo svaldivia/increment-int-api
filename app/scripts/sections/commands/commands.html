@@ -1,0 +1,16 @@
+<h1>Commands</h1>
+<a ui-sref="{{::vm.appStates.LOGIN}}">Log out</a>
+
+<h2>Count</h2>
+<p>{{ vm.count !== undefined ? vm.count : "Try getting the value or any other function"}}</p>
+
+<h3>Get Current Count</h3>
+<button ng-click="vm.getCount()" class="btn btn-sm btn-info">Get!</button>
+
+<h3>Reset Current Count</h3>
+<label>New Count</label>
+<input ng-model="vm.newCount" type="number" placeholder="New Count" >
+<button ng-click="vm.resetCount()" class="btn btn-sm btn-info">Reset!</button>
+
+<h3>Increment Count</h3>
+<button ng-click="vm.incrementCount()" class="btn btn-sm btn-info">Increment!</button>

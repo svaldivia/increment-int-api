@@ -1,0 +1,10 @@
+{
+  "name": "summoner-stats",
+  "version": "0.0.0",
+  "dependencies": {
+    "json3": "~3.3.1",
+    "lodash": "^4.17.4",
+    "angular-ui-router": "^1.0.4",
+    "angular": "^1.6.4"
+  }
+}
