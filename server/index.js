@@ -20,13 +20,8 @@ app.set('port', (process.env.PORT || 5000));
 
 app.set('appPath',__dirname.replace('server', '') + 'app');
 
-// app.use(express.static(__dirname + '/public'));
 app.use(express.static(app.get('appPath')));
 app.use(bodyParser.json());
-
-// views is directory for all template files
-// app.set('views', __dirname + '/views');
-// app.set('view engine', 'html');
 
 // Routes
 require('./routes')(app);
