@@ -45,6 +45,7 @@ Before you start make sure that you have the following installed:
 - npm
 - bower
 - [Heroku CLI](https://cli.heroku.com/) (This is just to deploy it, not necessary)
+- Mongodb
 
 ### Steps
 
@@ -56,10 +57,12 @@ $ bower install
 $ npm start
 ```
 
+Remember to start `$ mongod` on a separate terminal window.
+
 Your app should now be running on [localhost:5000](http://localhost:5000/).
 
 ## Run Deployed version
-Go to this [link](https://inc-int.herokuapp.com) and use the UI or just hit the following url your favourite HTTP tool:  
+Go to this [link](https://inc-int.herokuapp.com) and use the UI or just hit the following url your favorite HTTP tool:  
 `https://inc-int.herokuapp.com`
 
 ## API Endpoints
