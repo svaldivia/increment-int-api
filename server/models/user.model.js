@@ -26,7 +26,6 @@ var UserSchema = new Schema({
     }
 });
 
-// Try without saving this => should save scope
 UserSchema.pre('save', function (next) {
     var user = this;
 

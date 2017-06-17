@@ -25,16 +25,14 @@
         function initialize() {
             addStates();
 
-            $urlRouterProvider.otherwise(($injector, $location) => {
-                var $state = $injector.get('$state');
-                console.log($state);
-            });
+            $urlRouterProvider.otherwise(redirectTo404);
         }
 
         function addStates() {
             addState(appStates.INCINT,          appRootState(),         '');
             addState(appStates.LOGIN,           loginState(),           '/');
-            addState(appStates.COMMANDS,         commandState(),         '/command');
+            addState(appStates.COMMANDS,        commandState(),         '/command');
+            addState(appStates.FOUR_OH_FOUR,        fourOhFourState(),         '/404');
         }
 
         function $get($state) {
@@ -73,15 +71,18 @@
                 bindToController: true
             };
         }
+        function fourOhFourState() {
+            return {
+                templateUrl: '/scripts/sections/error/404.html',
+            };
+        }
 
-        //TODO
-        // function redirectTo404($injector, $location) {
-        //     var $state = $injector.get('$state');
-        //
-        //     $state.get(appStates.FOUR_OH_FOUR, null, {location: false});
-        //
-        //     return $location.path();
-        // }
+        function redirectTo404($injector, $location) {
+            var $state = $injector.get('$state');
 
+            $state.go(appStates.FOUR_OH_FOUR, null, {location: false});
+
+            return $location.path();
+        }
     }
 })();
